@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: PapayaWhip;
+Text-align: center;
+margin-top: 50px;
+font-family: Arial, sans-serif;
+}
+
+
+#Header {
+color: PapayaWhip;
+font-size: 50px;
+display: inline-block;
+border: 5px solid DarkSlateBlue;
+border-radius: 25px;
+padding: 25px;
+background-color: DarkSlateBlue;
+width: fit-content;
+margin-bottom: 20px;
+}
+
+#info {
+font-size: 20px;
+ margin-bottom: 50px;
+}
+
+
+#text {
+font-size: 20px;
+ margin-bottom: 20px;
+}
+
+    
+</style>
+</head>
+<body>
+
+<div id="Header">Emily's fun Game (❁´◡`❁)</div>
+<div id="info">5% chance of hitting big! Just keep clicking until the special image appears ╰(*°▽°*)╯</div>
+
+<div id="text"> click below to start! (*/ω＼*) </div>
+<button id="changeTextBtn">Click me</button>
+
+<script>
+const messages = [
+"try again!",
+"Damn, not this time",
+":(",
+"Almost!",
+"Nah",
+"Nuh uh",
+"Nope",
+"Still nope",
+"Next one for sure",
+"Just kidding, still no",
+"you'll get it soon",
+"......",
+":,(",
+"You don't seem very lucky huh",
+"Plz dont gamble, this is getting sad",
+"Try agin",
+"My condolences, try again",
+"（＞人＜；）",
+"You win some, you lose some ig",
+"this is getting really sad",
+"Try again :<",
+"Still not a winner",
+"Are you perhaps very unlucky?",
+"Plz dont get into a car today",
+"Nope",
+"Not this time :(",
+"Uh oh stinky",
+"Damn not this time either",
+"are you having fun?",
+"Nooooopppeee",
+];
+
+let index = 0;
+
+const textDiv = document.getElementById('text');
+const button = document.getElementById('changeTextBtn');
+
+button.addEventListener('click', () => {
+textDiv.textContent = messages[index];
+index = (index + 1) % messages.length;
+});
+</script>
+
+</body>
+</html>
